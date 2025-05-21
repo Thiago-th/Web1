@@ -1,4 +1,4 @@
-alert("Bem vindo ao curso!");
+//alert("Bem vindo ao curso!");
 /*
 document.getElementById("nome").value = "Oi";
 Busca no DOM os elementos da página criados usando sua Id
