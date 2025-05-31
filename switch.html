@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var escolha = prompt('Escolha 1 ou 2: ');   //Entrada armazenando como string
+        escolha = parseInt(escolha);                //Convertendo string pra inteiro
+        document.write(escolha+"<br>");
+        switch (escolha) {
+            case 1:
+                document.write("Escolheu 1");
+                break
+            case 2:
+                document.write("Escolheu 2");
+                break
+            default:
+                document.write("Escolheu outro!");
+                break
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Home</a>
+
+</body>
+</html>
