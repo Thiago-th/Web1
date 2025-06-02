@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massa</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        //Variáveis
+        var nome = prompt("Digite seu nome: ");
+        var altura = prompt("Informe sua altura em centímetros: ");
+        var peso = prompt("Informe seu peso: ");
+
+        //String pra real
+        altura = parseFloat(altura);
+        peso = parseFloat(peso);
+
+        //Cálculo IMC
+        let m = peso / ((altura/100) ** 2);   //Tbm da pra usar Math.pow() trocando ** por ,
+        let classificacao;
+
+        //Cascata de if/else meia bomba
+        if (m < 16) {
+            classificacao = "Baixo peso muito grave"
+        } else {
+            if (m >= 16 && m <= 16.99) {
+                classificacao = "Baixo peso grave"
+            } else {
+                if (m >= 17 && m <= 18.49) {
+                    classificacao = "Baixo peso"
+                } else {
+                    if (m >= 18.50 && m <= 24.99) {
+                        classificacao = "Peso normal"
+                    } else {
+                        if (m >= 25 && m <= 29.99) {
+                            classificacao = "Sobrepeso"
+                        } else {
+                            if (m >= 30 && m <= 34.99) {
+                                classificacao = " Obesidade grau I"
+                            } else {
+                                if (m >= 35 && m <= 39.99) {
+                                    classificacao = " Obesidade grau II"
+                                } else {
+                                    if (m >= 40) {
+                                        classificacao = " Obesidade grau III"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Tratando mensagens de erro das variáveis nome, m e classificacao
+        if (isNaN(m) || !nome) {
+            document.write("Insira dados validos!");
+        } else {
+            document.write(nome + " possui índice de massa corporal igual a " + m.toFixed(2) + ", sendo classificado como: " + classificacao + ".<br>");
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Home</a>
+</body>
+</html>

@@ -15,6 +15,6 @@ function calcular() {
     return;
   }
 
-  resultado = dano + cap * 0.7 + raca * 0.9;
+  resultado = dano + (cap * 0.7) + (raca * 0.9);
   document.getElementById("resultado").value = resultado.toFixed(2);
 }
