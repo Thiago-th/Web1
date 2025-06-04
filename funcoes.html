@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        //Valores acessados diretamente devem ter o parametro dentro do ()
+        //Valores acessados de forma externa (tipo de paginas html) usam o DOM document.getElementById("")
+        function calcularArea(largura, comprimento) {   //Tornar reutilizável
+            return largura * comprimento;
+            
+        }
+
+        var largura = parseFloat(prompt("Largura: "));
+        var comprimento = parseFloat(prompt("Comprimento: "));
+
+        var area = calcularArea(largura, comprimento);
+        document.write("Possui " + area + " metros quadrados!")
+    </script>
+</head>
+<body>
+    <br><a href="index.html">Home</a>
+</body>
+</html>

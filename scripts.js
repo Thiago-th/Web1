@@ -4,7 +4,7 @@ document.getElementById("nome").value = "Oi";
 Busca no DOM os elementos da página criados usando sua Id
 .value altera o valor do elemento pela string entre "aspas"
 */
-function calcular() {
+function calcularDano() {
   const dano = parseFloat(document.getElementById("dano").value.replace(",", "."));
   const cap = parseFloat(document.getElementById("cap").value.replace(",", "."));
   const raca = parseFloat(document.getElementById("raca").value.replace(",", "."));
