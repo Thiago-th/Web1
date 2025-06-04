@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+    <script>
+        //recuperar id via http
+        function exibirMensagem(id, mensagem, erro) {
+            if (true) {
+                mensagem("Sucesso no callback", "JavaScript");  //Aqui tem "titulo" e "descricao"
+            } else {
+                erro("Erro ao obter dados!");
+            }
+        }
+        var mensagem = function(titulo, descricao) {
+            document.write(titulo+"<br>");
+            document.write(descricao+"<br>");
+        }
+        var erro = function(err) {
+            document.write(err+"<br>");
+        }
+        exibirMensagem(1, mensagem, erro);
+
+
+        //
+        //Outro exemplo mais simples
+        function exibirResultado(numero) {  //Uma forma de evitar ter q digitar a mesma saída várias vezes
+            console.log(numero);
+        }
+
+        function soma(a, b, callback) {
+            var operacao = a + b;
+            //console.log(operacao);    //Se a saída fosse de outra forma e maior iria acabar digitando ela sempre tudo dnv
+            callback(operacao);         
+        }
+
+        function multiplicacao(a, b, callback) {
+            var operacao = a * b;
+            //console.log(operacao);    //Se a saída fosse de outra forma e maior iria acabar digitando ela sempre tudo dnv
+            callback(operacao);         
+        }
+        
+        //Devidas operações são chamadas, valores são inseridos
+        //"callback" recebe a instrução de qual função chamar "exibirResultado" e passa o valor da variavel "operacao" pra função
+        //A função chamada faz sua operação.
+        soma(5, 5, exibirResultado);            
+        multiplicacao(5, 5, exibirResultado);   
+    </script>
+</head>
+<body>
+    <a href="index.html">Home</a>
+</body>
+</html>
