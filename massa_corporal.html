@@ -22,34 +22,20 @@
         //Cascata de if/else meia bomba
         if (m < 16) {
             classificacao = "Baixo peso muito grave"
-        } else {
-            if (m >= 16 && m <= 16.99) {
-                classificacao = "Baixo peso grave"
-            } else {
-                if (m >= 17 && m <= 18.49) {
-                    classificacao = "Baixo peso"
-                } else {
-                    if (m >= 18.50 && m <= 24.99) {
-                        classificacao = "Peso normal"
-                    } else {
-                        if (m >= 25 && m <= 29.99) {
-                            classificacao = "Sobrepeso"
-                        } else {
-                            if (m >= 30 && m <= 34.99) {
-                                classificacao = " Obesidade grau I"
-                            } else {
-                                if (m >= 35 && m <= 39.99) {
-                                    classificacao = " Obesidade grau II"
-                                } else {
-                                    if (m >= 40) {
-                                        classificacao = " Obesidade grau III"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        } else if (m >= 16 && m <= 16.99) {
+            classificacao = "Baixo peso grave"
+        } else if (m >= 17 && m <= 18.49) {
+            classificacao = "Baixo peso"
+        } else if (m >= 18.50 && m <= 24.99) {
+            classificacao = "Peso normal"
+        } else if (m >= 25 && m <= 29.99) {
+            classificacao = "Sobrepeso"
+        } else if (m >= 30 && m <= 34.99) {
+            classificacao = " Obesidade grau I"
+        } else if (m >= 35 && m <= 39.99) {
+            classificacao = " Obesidade grau II"
+        } else if (m >= 40) {
+            classificacao = " Obesidade grau III"
         }
 
         //Tratando mensagens de erro das variáveis nome, m e classificacao

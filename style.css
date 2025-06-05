@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: space-between; /* Espaço entre as divs */
+  width: 100%;
+}
+
+.container1, .container2 {
+  width: 48%; /* Ajustado para evitar quebras de linha */
+  height: 200px;
+}
