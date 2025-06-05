@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        //Entrada de dados
+        var numero1 = parseFloat(prompt("Insira o primeiro número: "));
+        var operacao = prompt("Digite 'soma' ou 'subtracao': ");
+        var numero2 = parseFloat(prompt("Insira o segundo número: "));
+
+        //Calculo
+        function calcularOP(numero1, operacao, numero2) {
+            if (operacao == "soma") {
+                return numero1 + numero2;
+            } else if (operacao == "subtracao") {
+                return numero1 - numero2;
+            } else {
+                document.write("Insira uma operação válida!");
+            }
+        }
+
+        //Saída
+        let resultado = calcularOP(numero1, operacao, numero2)
+        document.write("O resutlado é: " + resultado);
+    </script>
+</head>
+<body>
+    <br><a href="index.html">Home</a>
+</body>
+</html>
