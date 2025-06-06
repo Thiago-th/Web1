@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos</title>
+    <style>
+        .amarelo {
+            background-color: yellow;
+        }
+        .vermelho {
+            background-color: red;
+        }
+        .verde {
+            background-color: green;
+        }
+    </style>
+    <script>
+        function amarelar() {
+            document.getElementById("campo").className = "amarelo";
+        }
+        
+        function escolherCor() {
+            let tamanho = document.getElementById("campo").value.length;
+            if (tamanho < 3) {
+                document.getElementById("campo").className = "vermelho";
+            } else {
+                document.getElementById("campo").className = "verde";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Campo com mudança de focus</h1>
+    <input type="text" id="campo" placeholder="Campo" onfocus="amarelar()" onblur="escolherCor()">
+    <hr>
+    <a href="index.html">Home</a>
+</body>
+</html>
