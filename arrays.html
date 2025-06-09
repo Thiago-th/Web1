@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        //Array multidimensional
+        var lista_compras = Array()         //Lista de compras
+        //Produtos                          //Lista de produtos dentro da lista de compras
+        lista_compras["produtos"] = Array("Acerola", "Banana", "Maçã", "Batata", "Cenoura", "Uva", "Tomate", "Passa");
+        //Pessoas                           //Lista de pessoas dentro da lista de compras
+        lista_compras["pessoas"] = Array("Thiago", "Matheus", "João");
+        //Saída
+        console.log(lista_compras);
+
+
+        //Array simples posição 0 fica vazia mas ainda conta no length
+        var frutas = Array()                //Lista de frutas
+        frutas[1] = "Acerola"
+        frutas[2] = "Banana"
+        frutas[3] = "Maçã"
+        frutas[4] = "Batata"
+        frutas[5] = "Cenoura"
+
+        //Acrescentar no final do array
+        frutas.push("Uva");
+        //Acrescentar no inicio do array
+        frutas.unshift("Tomate");
+        //Excluir no final do array
+        frutas.pop();
+        //Excluir no inicio do array
+        frutas.shift();
+
+        //Saída
+        console.log(frutas);
+
+
+        //Pesquisa
+        let pesquisa = lista_compras["produtos"].indexOf("Batata");
+        if (pesquisa === -1) {
+            console.log("Objeto não encontrado!");
+        } else {
+            console.log("Objeto encontrado na posição: " + pesquisa);
+        }
+
+        //Ordenação
+        var lista_texto = Array("Acerola", "Banana", "Maçã", "Batata", "Cenoura", "Uva", "Tomate", "Passa");
+        console.log(lista_texto.sort());    //"sort" ja ordena strings sme problemas
+        var lista_numero = Array(12, 41, 6, 87, 111);
+        console.log(lista_numero.sort(ordenarNumeros)); //sort precisa de auxilio d euma função par aorganizar numeros
+
+        function ordenarNumeros(a, b) {
+            return a - b
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Home</a>
+</body>
+</html>
