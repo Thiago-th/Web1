@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        //Array
+        var objetos = Array("Cadeira", "Impressora", "Garfo");
+
+        //Função do botão adicionar
+        function adicionarLista() {
+            var resultado = document.getElementById("atividade_array").value.trim();    //.trim() pra retirar espaços das laterais
+            if (!resultado) {
+                alert("Informe um valor válido!");
+            } else if (objetos.includes(resultado)) {                           //Se o valor do campo ja existe dentro do Array retorna true
+                alert("O objeto ja existe!");
+            } else {
+                objetos.push(resultado);                                        //Se for diferente da lista vai ser adicionado nela
+                console.log(objetos);
+                document.getElementById("atividade_array").value = "";
+            }
+        }
+
+        //Função do botão ordenar
+        function ordenarLista() {
+            console.log(objetos.sort());    //Ordem alfabetica mas separando caixa alta e baixa
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="atividade_array">
+    <button onclick="adicionarLista()" >Adicionar</button>
+    <button onclick="ordenarLista()" >Ordenar</button>
+    
+    <hr>
+    <a href="index.html">Home</a>
+</body>
+</html>
