@@ -12,6 +12,15 @@
             document.write("<hr>");
         }
         
+        let a = 1;
+        while (a <= 10) {
+            let b = 1;  //b precisa ser reiniciado a cada iteração de a
+            while (b <= 10) {
+                console.log(a + " x " + b + " = " + (a * b));
+                b++;
+            }
+            a++;
+        }
     </script>
 </head>
 <body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var listaConvidados = ["Thiago", "Gabriel", "Danilo", "Matheus", "João"]
+        console.log(listaConvidados);
+        
+        //For In
+        for (var x in listaConvidados) {
+            console.log("Indice: " +x+ " Valor: " +listaConvidados[x]);
+        }
+
+        //For Each
+        var f = function(valor, indice, array) {
+            console.log(indice, valor);
+        }
+        listaConvidados.forEach(f);
+        /*listaConvidados.forEach(function(valor, indice, array) {
+            console.log("Indice: " +indice+ " Valor: " +valor);
+        })*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

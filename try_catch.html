@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        //Exemplo de video
+        var video = Array()
+        video[1] = Array()
+        video[1]["nome"] = "Video";
+        video[1]["categoria"] = "Série";
+
+        function getVideo(video) {
+            try {
+                //http
+                console.log(video[0]["nome"]);
+            } catch(e) {
+                console.log("Tratamento de erros");
+                //throw new Error("Houve um erro!");
+                
+            } finally {
+                console.log("Finally!");
+            }
+        }
+        getVideo(video);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
